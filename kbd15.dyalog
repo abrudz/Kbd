@@ -3,7 +3,7 @@
      ⍝ returns dfns style keyboard 16 76⍴map
      ⍝ limitations: max one character per keystroke, does not handle separate CapsLock state
 
-     ⍝ new primitives in 16.0
+     ⍝ new features in 16.0
      at←{⍺←⊢                                     ⍝ Substitution: (⍺ ⍺⍺ ⍵) at ⍵⍵ in ⍵.
          0::⎕SIGNAL ⎕EN                          ⍝ signal any error to caller
          3=⎕NC'⍵⍵':⍺ ⍺⍺ ∇∇((,⍵⊢¨~~⍵⍵ ⍵)/,⍳⍴⍵)⊢⍵  ⍝ selector is function: bool mask
@@ -15,6 +15,7 @@
      }
      where←{(,⍵)/,⍳⍴⍵}
      nest←{⊂⍣(1=≡⍵)⊢⍵}
+     ∆CSV←↑(⎕UCS 9)(1↓¨,⊂⍨⊣=,)¨⊢
 
      ⍺←⍬                 ⍝ default left arg is none
      n←101 102⍳⊂⍺        ⍝ key count type
@@ -51,9 +52,9 @@
 
      shiftstate layout keyname deadkey←'SHIFTSTATE' 'LAYOUT' 'KEYNAME' 'DEADKEY'In klc ⍝ section cut off points
 
-     data←layout↓klc↑⍨deadkey⌊keyname                     ⍝ data section ends at whichever section follows
-     data⌿⍨←⎕D∊⍨⊃¨data                                    ⍝ remove comments and blank lines
-     matrix←⎕CSV⍠'Separator' 'Tab'⊂'(\t)\t'⎕R'\1'⊢data    ⍝ remove duplicate tabs and parse
+     data←layout↓klc↑⍨deadkey⌊keyname ⍝ data section ends at whichever section follows
+     data⌿⍨←⎕D∊⍨⊃¨data                ⍝ remove comments and blank lines
+     matrix←∆CSV'(\t)\t'⎕R'\1'⊢data   ⍝ remove duplicate tabs and parse
 
      matrix←⊃⍪⌿(⌿∘matrix)¨1 0=⊂matrix[;1]Is kTopLeft ⍝ move top left key to front
 
