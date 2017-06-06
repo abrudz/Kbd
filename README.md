@@ -9,7 +9,7 @@ The script `kbd.dyalog` is a function to generate pictures of layouts. Usage:
 
 ## Version 15.0 compatibility
 
-To run on Dyalog APL version 15.0, execute the folowing before runnning `kbd`:
+To run on Dyalog APL version 15.0, execute the folowing before running `kbd`:
 1. `]Load path/make15`
 1. `make15`
 
