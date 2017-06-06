@@ -3,7 +3,7 @@ Build using [MSKLC](https://msdn.microsoft.com/en-us/globalization/keyboardlayou
 
 ## Keyboard layout picture utility
 
-The script `kbd.dyalog` (`kbd15.dyalog` for version 15.0) is a function to generate pictures of layouts. Usage:
+The script `kbd.dyalog` is a function to generate pictures of layouts. Usage:
 1. `]Load path/kbd`
 1. `kbd 'path/altgr.klc'` (optionally a left argument can specify the number of keys; 101 or 102)
 
