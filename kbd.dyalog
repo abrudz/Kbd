@@ -1,12 +1,12 @@
 ﻿kbd←{
-     ⍝ takes optional number of keys (default: both) as left argument and .klc filename as right argument
+     ⍝ takes optional number of keys (default: both) as left argument and .klc file or filename as right argument
      ⍝ returns dfns style keyboard map with dead keys' tables below
      ⍝ limitations: max one character per keystroke, ignores separate CapsLock state
 
-     ⍺←⍬                 ⍝ default left arg is none
-     n←101 102⍳⊂⍺        ⍝ key count type
-     3=n:⊃⍪⌿101 102 ∇¨⊂⍵ ⍝ no left arg shows both
-     klc←⊃⎕NGET ⍵ 1      ⍝ load file
+     klc←⊃⎕NGET⍣(1=≡,⍵)⊢⍵ 1 ⍝ load file if not given as argument
+     ⍺←⍬                    ⍝ default left arg is none
+     n←101 102⍳⊂⍺           ⍝ key count type
+     3=n:⊃⍪⌿101 102 ∇¨⊂klc  ⍝ no left arg shows both
 
      kbd←0 76⍴''
      kbd⍪←n⊃'┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬─────────┐' '┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬─────────┐'
