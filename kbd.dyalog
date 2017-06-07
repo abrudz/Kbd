@@ -46,8 +46,8 @@
 
      shiftstate layout keyname deadkey keyname←'SHIFTSTATE' 'LAYOUT' 'KEYNAME' 'DEADKEY' 'KEYNAME'In klc ⍝ section cut-off points
 
-     data←('DEADKEY'∘(⊃⍷)¨⊂⊢)deadkey↓0,keyname↑klc ⍝ dead key sections are before key names
-     deadkeys←⊃⍪/(Table∘Visual Char¨∘Hex4s)¨data   ⍝ dead keys' tables
+     data←('DEADKEY'∘(⊃⍷)¨⊂⊢)deadkey↓' ',keyname↑klc ⍝ dead key sections are before key names
+     deadkeys←⊃⍪/(Table∘Visual Char¨∘Hex4s)¨data     ⍝ dead keys' tables
 
      data←layout↓klc↑⍨deadkey⌊keyname                  ⍝ key data section ends at whichever section follows
      data⌿⍨←⎕D∊⍨⊃¨data                                 ⍝ remove comments and blank lines
