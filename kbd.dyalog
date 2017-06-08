@@ -1,4 +1,4 @@
-﻿kbd←{
+kbd←{
      ⍝ takes optional number of keys (default: both) as left argument and .klc file or filename as right argument
      ⍝ returns dfns style keyboard map with dead keys' tables below
      ⍝ limitations: max one character per keystroke, ignores separate CapsLock state
@@ -38,9 +38,9 @@
      In←{1⍳⍨⍺∘(⊃⍷)¨⍵}¨∘⊂ ⍝ first beginning occurance of each ⍺ in ⍵
      Is←∊∘⊆              ⍝ ⍺ is one of ⍵
 
-     whitesp←,∘Char¨'0009' '00a0' '0020' '2003' ⍝ tab nbsp space emsp
-     visible←,∘Char¨'2409' '2419' '2420' '2422' ⍝ HT  /b   SP EM
-     Visual←whitesp ⎕R visible                  ⍝ show invisible symbols
+     whitesp←,∘Char¨'0009' '00a0' '2003' ⍝ tab nbsp emsp
+     visible←,∘Char¨'2409' '2419' '2422' ⍝ HT  /b   EM
+     Visual←whitesp ⎕R visible           ⍝ show invisible symbols
 
      Table←⍉'│'(⍪⍪⊣)(3 2⍴' @ ││',⍨⊃)⍪71↑1∘↓⍴⍨2,⍨(⌊2÷⍨≢) ⍝ dead key table
 
