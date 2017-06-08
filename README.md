@@ -1,5 +1,8 @@
-# Unified AltGr (Alt+Ctrl) APL keyboard
-Build using [MSKLC](https://msdn.microsoft.com/en-us/globalization/keyboardlayouts.aspx), which works fine on Windows 10, despite its documentation. It is safe to ignore the build warnings.
+# English Unified AltGr (Alt+Ctrl) APL keyboards
+
+These keyboard layouts were designed to facilitate typing Dyalog APL in that they provide easy access to all Dyalog APL symbols and allow the typing of all valid Dyalog APL identifiers. As a sideeffect, they allow the typing most major Western European languages.
+
+Build using [MSKLC](https://msdn.microsoft.com/en-us/globalization/keyboardlayouts.aspx), which works fine on Windows 10, despite its documentation. It is safe to ignore the build warnings. Then use the generated executable to install the layout.
 
 ## US layout
 
