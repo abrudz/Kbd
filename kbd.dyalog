@@ -1,4 +1,4 @@
-kbd←{
+﻿ kbd←{
      ⍝ takes optional number of keys (default: both) as left argument and .klc file or filename as right argument
      ⍝ returns dfns style keyboard map with dead keys' tables below
      ⍝ limitations: max one character per keystroke, ignores separate CapsLock state
@@ -35,7 +35,7 @@ kbd←{
      Char←⎕UCS 16⊥¯1+digits⍳4↑⊢ ⍝ hex to character
      Symbol←(3⌊≢)⊃⊃,' ',Char    ⍝ appropriate display symbol
 
-     In←{1⍳⍨⍺∘(⊃⍷)¨⍵}¨∘⊂ ⍝ first beginning occurance of each ⍺ in ⍵
+     In←{1⍳⍨⍺∘(⊃⍷)¨⍵}¨∘⊂ ⍝ first beginning occurence of each ⍺ in ⍵
      Is←∊∘⊆              ⍝ ⍺ is one of ⍵
 
      whitesp←,∘Char¨'0009' '00a0' '2003' ⍝ tab nbsp emsp
@@ -49,9 +49,9 @@ kbd←{
      data←('DEADKEY'∘(⊃⍷)¨⊂⊢)deadkey↓' ',keyname↑klc ⍝ dead key sections are before key names
      deadkeys←⊃⍪/(Table∘Visual Char¨∘Hex4s)¨data     ⍝ dead keys' tables
 
-     data←layout↓klc↑⍨deadkey⌊keyname                  ⍝ key data section ends at whichever section follows
-     data⌿⍨←⎕D∊⍨⊃¨data                                 ⍝ remove comments and blank lines
-     matrix←⎕CSV⍠'Separator' 'Tab'⊂'(\t)\t'⎕R'\1'⊢data ⍝ remove duplicate tabs and parse
+     data←layout↓klc↑⍨deadkey⌊keyname                    ⍝ key data section ends at whichever section follows
+     data⌿⍨←⎕D∊⍨⊃¨data                                   ⍝ remove comments and blank lines
+     matrix←⎕CSV⍠'Separator'(⎕UCS 9)⊂'(\t)\t'⎕R'\1'⊢data ⍝ remove duplicate tabs and parse
 
      matrix←⊃⍪⌿(⌿∘matrix)¨1 0=⊂matrix[;1]Is kTopLeft ⍝ move top left key to front
      matrix←⊃⍪⌿(⌿∘matrix)¨0 1=⊂matrix[;1]Is kSpace   ⍝ move space to back
