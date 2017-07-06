@@ -30,7 +30,7 @@
      sNormal sShift sAltGr sAltGrShift←'0167' ⍝ shift states
      digits←⎕D,819⌶⎕A                         ⍝ base-36 digits
 
-     Hex4s←'[\dabcdef]{4}'⎕S'&' ⍝ find four-digit hex numbers
+     Hex4s←'[\da-f]{4}'⎕S'&' ⍝ find four-digit hex numbers
      Hex←⊃∘digits¨1+16 16⊤⊢     ⍝ decimal to hex
      Char←⎕UCS 16⊥¯1+digits⍳4↑⊢ ⍝ hex to character
      Symbol←(3⌊≢)⊃⊃,' ',Char    ⍝ appropriate display symbol
