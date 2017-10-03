@@ -1,4 +1,4 @@
-﻿ kbd←{
+﻿kbd←{
      ⍝ takes optional number of keys (default: both) as left argument and .klc file or filename as right argument
      ⍝ returns dfns style keyboard map with dead keys' tables below
      ⍝ limitations: max one character per keystroke, ignores separate CapsLock state
@@ -26,9 +26,9 @@
      kbd⍪←n⊃'│       │     │      │            0 6           │      │      │     │      │' '│       │     │      │            0 6           │      │      │     │      │'
      kbd⍪←n⊃'└───────┴─────┴──────┴──────────────────────────┴──────┴──────┴─────┴──────┘' '└───────┴─────┴──────┴──────────────────────────┴──────┴──────┴─────┴──────┘'
 
-     kTopLeft kSpace kDecimal k102←'29' '39' '53' '56'    ⍝ scan codes
-     sNormal sShift sAltGr sAltGrShift←'0167' ⍝ shift states
-     digits←⎕D,819⌶⎕A                         ⍝ base-36 digits
+     kTopLeft kSpace kDecimal k102←⍕¨29 39 53 56 ⍝ scan codes
+     sNormal sShift sAltGr sAltGrShift←⍕¨0 1 6 7 ⍝ shift states
+     digits←⎕D,819⌶⎕A                            ⍝ base-36 digits
 
      Hex4s←'[\da-f]{4}'⎕S'&' ⍝ find four-digit hex numbers
      Hex←⊃∘digits¨1+16 16⊤⊢     ⍝ decimal to hex
@@ -70,13 +70,13 @@
      indicesX←⍸kbd∊'17' ⍝ indices of placeholders for Shift+ and Shift+AltGr+
      indicesY←⍸kbd∊'06' ⍝ indices of placeholders for normal and AltGr+
 
-     indices←indicesX/⍨,'@'∊¨matrix[;columns[states⍳sShift sAltGrShift]] ⍝ dead shifted keys
-     indices,←indicesY/⍨,'@'∊¨matrix[;columns[states⍳sNormal sAltGr]]    ⍝ dead unshifted keys
+     indices←indicesX/⍨,'@'∊¨matrix[;columns[states⍳sShift,sAltGrShift]] ⍝ dead shifted keys
+     indices,←indicesY/⍨,'@'∊¨matrix[;columns[states⍳sNormal,sAltGr]]    ⍝ dead unshifted keys
      indices+←⊂0 1                                                       ⍝ move one column right
 
      symbols←'@'⊣¨indices                                         ⍝ one @ for each dead key
-     symbols,←Symbol¨,matrix[;columns[states⍳sShift sAltGrShift]] ⍝ all the symbols for shifted keys
-     symbols,←Symbol¨,matrix[;columns[states⍳sNormal sAltGr]]     ⍝ all the symbols for unshifted keys
+     symbols,←Symbol¨,matrix[;columns[states⍳sShift,sAltGrShift]] ⍝ all the symbols for shifted keys
+     symbols,←Symbol¨,matrix[;columns[states⍳sNormal,sAltGr]]     ⍝ all the symbols for unshifted keys
      symbols←Visual symbols                                       ⍝ substitute with control pictures
 
      indices,←indicesX,indicesY ⍝ append the remaining indices
