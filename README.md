@@ -6,12 +6,32 @@ Build using [MSKLC](https://www.microsoft.com/en-us/download/details.aspx?id=223
 
 **Note:** you may have to enable .NET 2.0 and 3.5 for MSKLC to install and run. Search the web for how to do so.
 
-## US layout
+## US layout (altgr.klc)
 
 This layout is a strict superset of the standard US layout and should therefore not interfere with existing typing habits.
 
-## UK layout
+## UK layout (altgruk.klc)
 The UK layout loses the standard AltGr combos. Instead, acute accented vowels are available with AltGr+Shift+A,Vowel and Euro sign is available with AltGr+Shift+Y,UppercaseE and broken stile is available with AltGr+Shift+R,UnbrokenStile.
+
+## APLX layout (aplxstdx.klc)
+
+This layout implements APLX's *Standard (classic) APL* layout for US English. Differences are:
+
+1. It only allows using AltGr (right side Alt) for lowercase etc. APLX does the same by default, but has an option to use (left side) Alt.
+1. When installed, it becomes just another national language keyboard, so it will affect all applications, not just APL. However, Windows has an option to set layout per application.
+1. There are mappings for symbols used in Dyalog but absent on the original layout:
+
+    | AltGr+Shift+ | Symbol| Notes |
+    | ------------ | ----- | ----- |
+    |`/`|`⍠`| default Dyalog location|
+    |`J`|`⍤`| default Dyalog location|
+    |`P`|`⍣`| default Dyalog location|
+    |`Z`|`⊆`| default Dyalog location|
+    |`6`|`^`| corresponds to normal US-EN location|
+    |`Q`|`⌸`| "Qey" (K is taken by a duplicated ⌷ for some reason, even though L is available)|
+    |`A`|`@`| "At" (2 is taken by ")|
+    |`S`|`⌺`| "Stencil" (⋄ is taken by £)|
+    |`C`|`⍨`| "Commute" (T is taken by ⍬)|
 
 ## Keyboard layout picture utility
 
