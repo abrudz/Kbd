@@ -4,6 +4,8 @@ These keyboard layouts were designed to facilitate typing Dyalog APL in that the
 
 Build using [MSKLC](https://www.microsoft.com/en-us/download/details.aspx?id=22339), which works fine on Windows 10, despite its documentation. It is safe to ignore the build warnings. Then use the generated executable to install the layout.
 
+**Note:** you may have to enable .NET 2.0 and 3.5 for MSKLC to install and run. Search the web for how to do so.
+
 ## US layout
 
 This layout is a strict superset of the standard US layout and should therefore not interfere with existing typing habits.
