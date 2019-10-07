@@ -1,4 +1,4 @@
-﻿kbd←{
+ kbd←{
      ⍝ takes optional number of keys (default: both) as left argument and .klc file or filename as right argument
      ⍝ returns dfns style keyboard map with dead keys' tables below
      ⍝ limitations: max one character per keystroke, ignores separate CapsLock state
@@ -30,7 +30,7 @@
      sNormal sShift sAltGr sAltGrShift←⍕¨0 1 6 7 ⍝ shift states
      digits←⎕D,819⌶⎕A                            ⍝ base-36 digits
 
-     Hex4s←'[\da-f]{4}'⎕S'&' ⍝ find four-digit hex numbers
+     Hex4s←'[\da-f]{4}'⎕S'&'⍠1  ⍝ find four-digit hex numbers
      Hex←⊃∘digits¨1+16 16⊤⊢     ⍝ decimal to hex
      Char←⎕UCS 16⊥¯1+digits⍳4↑⊢ ⍝ hex to character
      Symbol←(3⌊≢)⊃⊃,' ',Char    ⍝ appropriate display symbol
@@ -38,11 +38,11 @@
      In←{1⍳⍨⍺∘(⊃⍷)¨⍵}¨∘⊂ ⍝ first beginning occurence of each ⍺ in ⍵
      Is←∊∘⊆              ⍝ ⍺ is one of ⍵
 
-     whitesp←,∘Char¨'0009' '00a0' '2003' ⍝ tab nbsp emsp
-     visible←,∘Char¨'2409' '2419' '2422' ⍝ HT  /b   EM
+     whitesp←,∘Char¨'0009' '00a0' '007f' '2003' ⍝ tab nbsp esc emsp
+     visible←,∘Char¨'2409' '2419' '241B' '2422' ⍝ HT  /b   ESC EM
      Visual←whitesp ⎕R visible           ⍝ show invisible symbols
 
-     Table←⍉'│'(⍪⍪⊣)(3 2⍴' @ ││',⍨⊃)⍪71↑1∘↓⍴⍨2,⍨(⌊2÷⍨≢) ⍝ dead key table
+     Table←⍉'│'(⍪⍪⊣)(3 2⍴' @ ││',⍨2⊃,)⍪71↑2∘↓⍴⍨2,⍨(⌊¯1+2÷⍨≢) ⍝ dead key table
 
      shiftstate layout keyname deadkey keyname←'SHIFTSTATE' 'LAYOUT' 'KEYNAME' 'DEADKEY' 'KEYNAME'In klc ⍝ section cut-off points
 
