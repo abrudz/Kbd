@@ -17,6 +17,7 @@ Get the appropriate version from the [Latest Release](https://github.com/abrudz/
 ## ASCII symbol composition layouts
 
 | Filename        | Description                                                                                                              |
+| --- | --- |
 | CompUS.zip      | [ASCII symbol composition](https://aplwiki.com/wiki/Typing_glyphs#ASCII_symbol_composition) layout for American English. |
 | CompUSmacOS.zip | [ASCII symbol composition](https://aplwiki.com/wiki/Typing_glyphs#ASCII_symbol_composition) layout for American English. |
 | CompUKmacOS.zip | [ASCII symbol composition](https://aplwiki.com/wiki/Typing_glyphs#ASCII_symbol_composition) layout for British English.  |

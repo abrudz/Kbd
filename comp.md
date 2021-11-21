@@ -1,7 +1,7 @@
 # ASCII symbol compositions
 Not every symbols has a meaning in any or every APL implementation or dialect. Some symbols have different meanings in different implementations and dialects.
 
-Not every APL symbol is included in every keyboard layout. Please [open an issue]() if you would like to request a symbol to be included.
+Not every APL symbol is included in every keyboard layout. Please [open an issue](https://github.com/abrudz/Kbd/issues/new) if you would like to request a symbol to be included.
 
 Some compositions are commutative (ASCII symbols can be entered in either order), but some must be entered in the order given (left tack and right tack ⊣ ⊢).
 
