@@ -1,8 +1,10 @@
-# English Unified AltGr (Alt+Ctrl) APL keyboards
+# English APL keyboards
 
 These keyboard layouts were designed to facilitate typing Dyalog APL in that they provide easy access to all Dyalog APL symbols and allow the typing of all valid Dyalog APL identifiers. As a sideeffect, they allow the typing most major Western European languages.
 
 Get the appropriate version from the [Latest Release](https://github.com/abrudz/Kbd/releases/latest):
+
+## Unified AltGr (Alt+Ctrl) layouts
 
 | Filename       | Description                                                  |
 | -------------- | ------------------------------------------------------------ |
@@ -11,7 +13,15 @@ Get the appropriate version from the [Latest Release](https://github.com/abrudz/
 | AplxStdxUS.zip | APLX's *Standard (classic) APL* layout for US English. See [below](#APLX) for details |
 | BacktickUK.zip | The standard UK layout, but changes the backtick key <kbd>`</kbd> into a dead key which works as [prefix key](https://aplwiki.com/wiki/Typing_glyphs#Prefix_key) for APL symbols. To type a backtick, simply follow the key by a space. |
 | BacktickUS.zip | The standard US layout, but changes the backtick key <kbd>`</kbd> into a dead key which works as [prefix key](https://aplwiki.com/wiki/Typing_glyphs#Prefix_key) for APL symbols. To type a backtick, simply follow the key by a space. |
-| CompUS.zip     | [ASCII symbol composition](https://aplwiki.com/wiki/Typing_glyphs#ASCII_symbol_composition) layout for American English. |
+
+## ASCII symbol composition layouts
+
+| Filename        | Description                                                                                                              |
+| CompUS.zip      | [ASCII symbol composition](https://aplwiki.com/wiki/Typing_glyphs#ASCII_symbol_composition) layout for American English. |
+| CompUSmacOS.zip | [ASCII symbol composition](https://aplwiki.com/wiki/Typing_glyphs#ASCII_symbol_composition) layout for American English. |
+| CompUKmacOS.zip | [ASCII symbol composition](https://aplwiki.com/wiki/Typing_glyphs#ASCII_symbol_composition) layout for British English.  |
+
+These are mostly the same as the tab-input compositions found on [TryAPL](https://tryapl.org). See [the list of symbol compositions](comp.md).
 
 ## APLX
 
