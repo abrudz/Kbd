@@ -1,14 +1,14 @@
 # ASCII symbol compositions
-Not every symbols has a meaning in any or every APL implementation or dialect. Some symbols have different meanings in different implementations and dialects.
+Not every symbols has a meaning in any or every APL implementation or dialect. Some symbols have different meanings in different implementations and dialects. The following are listed with their Dyalog meanings (in `⎕ML←1`) and some [extensions](https://github.com/abrudz/dyalog-apl-extended).
 
 Not every APL symbol is included in every keyboard layout. Please [open an issue](https://github.com/abrudz/Kbd/issues/new) if you would like to request a symbol to be included.
 
-Some compositions are commutative (ASCII symbols can be entered in either order), but some must be entered in the order given (left tack and right tack ⊣ ⊢).
-
-## Microsoft Windows
+Some compositions are commutative (ASCII symbols can be entered in either order), but some must be entered in the order given (such as left tack and right tack ⊣ ⊢).
 
 ## macOS
 \**Not the Greek or Latin group symbols*, possibly has "APL Function Symbol" in the Unicode name.
+
+Press alt and the 1st symbol together followed by the 2nd symbol. For example, <kbd>alt</kbd>+<kbd>&lt;</kbd> then <kbd>-</kbd> gives `←` .
 
 | Symbol | Function (symbol name / Unicode symbol name) | Compositions |
 | --- | --- | --- |
@@ -58,14 +58,14 @@ Some compositions are commutative (ASCII symbols can be entered in either order)
 | ⍳ | Index generator / Index-of (iota\*) | ii |
 | ⍸ | Where / Interval-index (iota underbar) | i_ |
 | ∊ | Enlist / Membership (epsilon\* / small element of) | ee |
-| ⍷ | Find (epsilon underbar) | e_ \| |
+| ⍷ | Find (epsilon underbar) | e_ |
 | ⍺ | Left dfn argument / dop operand (alpha\*) | aa |
 | ⍶ | Alpha underbar | a_ |
 | ⍵ | Right dfn argument / dop operand (omega\*) | ww |
 | ⍹ | Omega underbar | w_ |
 | ⍴ | Shape / Reshape (rho) | rr pp |
 | ⌿ | Replicate-first / Compress-first / Reduce-first (slash bar) | /- |
-| ⍀ | Expand-first / Scan-first (backslash bar) | \- |
+| ⍀ | Expand-first / Scan-first (backslash bar) | \\- |
 | ⍪ | Table / Catenate-first (comma bar) | ,- |
 | ¯ | Negative literal / (high minus / macron) | -- |
 | ⎕ | System (quad) | \[\] |
