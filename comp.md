@@ -1,4 +1,4 @@
-# ASCII symbol compositions
+# ASCII character compositions
 
 ## Principles
 The composition input system is designed to be easy to pick up, while only remembering three simple rules:
@@ -22,6 +22,7 @@ The composition input system is designed to be easy to pick up, while only remem
 
 * While the compositions below are (near) universal across keyboards, the precise method of combining characters into glyphs is not: Some layouts require you to hold <kbd>Alt</kbd> and the first character together, followed by the second character (for example, <kbd>Alt</kbd>+<kbd>&lt;</kbd> then <kbd>-</kbd> gives `←`) while others require you to type the two charcharcters as normal, followed by hitting <kbd>Tab</kbd> to combine them.
 
+## Mappings
 | Glyph | Names | Characters |
 | --- | --- | --- |
 | `←` | Assignment (leftwards arrow) | `<-` |
