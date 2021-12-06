@@ -2,6 +2,11 @@
 
 These keyboard layouts were designed to facilitate typing Dyalog APL in that they provide easy access to all Dyalog APL symbols and allow the typing of all valid Dyalog APL identifiers. As a sideeffect, they allow the typing most major Western European languages.
 
+You will want to uninstall the Dyalog IME if you've installed it:
+* Run the Dyalog APL uninstaller
+* Untick "Uninstall the Dyalog interpreter"
+* Hit <kbd>Uninstall</kbd>
+
 Get the appropriate version from the [Latest Release](https://github.com/abrudz/Kbd/releases/latest):
 
 ## Unified AltGr (Alt+Ctrl) layouts
