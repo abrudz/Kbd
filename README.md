@@ -44,7 +44,7 @@ This layout implements APLX's *Standard (classic) APL* layout for US English. Di
     |`P`|`⍣`| default Dyalog location|
     |`Z`|`⊆`| default Dyalog location|
     |`6`|`^`| corresponds to normal US-EN location|
-    |`Q`|`⌸`| "Qey" (K is taken by a duplicated ⌷ for some reason, even though L is available)|
+    |`Q`|`⌸`| "Quay" for "Key" (K is taken by a duplicated ⌷ for some reason, even though L is available)|
     |`A`|`@`| "At" (2 is taken by ")|
     |`S`|`⌺`| "Stencil" (⋄ is taken by £)|
     |`C`|`⍨`| "Commute" (T is taken by ⍬)|
