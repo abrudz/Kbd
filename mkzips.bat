@@ -1,0 +1,1 @@
+@for /d %%d in (%*/*.) do tar -cf %%d.zip -a -C %%d *
