@@ -1,0 +1,17 @@
+ DeadKeys←{ ⍝ DEADKEY definitions for comp.klc
+     ⍝ Takes JSON tcs defined by https://github.com/abrudz/lb/blob/master/lb.js#L3-L5
+     ⎕IO←0 ⋄ (tab lf)←⎕UCS 9 10 ⋄ ascii←⎕UCS⍳128
+
+     Tris←(3,⍨≢÷3⍨)⍛⍴0∘⎕JSON
+     Ascii←(∧/2∘↑⍤1∊ascii⍨)⍛⌿
+     AddRev←(≠2∘↑⍤1)⍛⌿⊢⍪⌽@0 1⍤1
+
+     Base4x16←16 16 16 16⊤⎕UCS∘⊃
+     Hex4←Base4x16⊂⍛⌷⎕D,∘⎕C ⎕A⍨
+     Combo←⊣Hex4⍛,tab,⊢Hex4⍛,tab,'// ',⊣,' -> ',⊢,lf⍨
+     Combos←∊Combo/⍤1
+     DeadKey←⊂lf,'DEADKEY',tab,⊣Hex4⍛,lf lf,∘Combos⊢⍪' ',⊣
+     Group←DeadKey⌸/1 1∘⊂
+
+     ∊Group AddRev Ascii Tris ⍵
+ }
