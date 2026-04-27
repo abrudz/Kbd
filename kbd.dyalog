@@ -28,7 +28,7 @@
 
      kTopLeft kSpace kDecimal k102←⍕¨29 39 53 56 ⍝ scan codes
      sNormal sShift sAltGr sAltGrShift←⍕¨0 1 6 7 ⍝ shift states
-     digits←⎕D,819⌶⎕A                            ⍝ base-36 digits
+     digits←⎕D,⎕C ⎕A                             ⍝ base-36 digits
 
      Hex4s←'[\da-f]{4}'⎕S'&'⍠1  ⍝ find four-digit hex numbers
      Hex←⊃∘digits¨1+16 16⊤⊢     ⍝ decimal to hex
