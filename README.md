@@ -1,4 +1,4 @@
-# English APL keyboards
+# APL keyboards
 
 These keyboard layouts were designed to facilitate typing Dyalog APL in that they provide easy access to all Dyalog APL symbols and allow the typing of all valid Dyalog APL identifiers. As a sideeffect, they allow the typing most major Western European languages.
 
@@ -16,6 +16,9 @@ Get the appropriate version from the [Latest Release](https://github.com/abrudz/
 | AltGrUK.zip    | This layout uses right-hand Alt as APL [shifting key](https://aplwiki.com/wiki/Typing_glyphs#Shifting_key). The UK layout loses the standard AltGr combos. Instead, acute accented vowels are available with AltGr+Shift+A,Vowel and Euro sign is available with AltGr+Shift+Y,UppercaseE and broken stile is available with AltGr+Shift+R,UnbrokenStile. |
 | AltGrUS.zip    | This layout uses right-hand Alt as APL [shifting key](https://aplwiki.com/wiki/Typing_glyphs#Shifting_key) and is a strict superset of the standard US layout. It should therefore not interfere with existing typing habits. |
 | AplxStdxUS.zip | APLX's *Standard (classic) APL* layout for US English. See [below](#APLX) for details |
+| AltGrDa.zip    | This layout uses right-hand Alt as APL [shifting key](https://aplwiki.com/wiki/Typing_glyphs#Shifting_key) and is a strict superset of the standard Danish layout, keeping the standard AltGr combos. It should therefore not interfere with existing Danish typing habits. |
+| AltGrDe.zip    | This layout uses right-hand Alt as APL [shifting key](https://aplwiki.com/wiki/Typing_glyphs#Shifting_key) and is a strict superset of the standard German layout, keeping the standard AltGr combos. It should therefore not interfere with existing German typing habits. |
+| AltGrIt.zip    | This layout uses right-hand Alt as APL [shifting key](https://aplwiki.com/wiki/Typing_glyphs#Shifting_key) and is a strict superset of the standard Italian layout, keeping the standard AltGr combos. It should therefore not interfere with existing Italian typing habits. |
 
 ## Backtick prefix layouts
 
